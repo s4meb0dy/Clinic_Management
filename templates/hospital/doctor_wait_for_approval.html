@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Clinic nagement</title>
+
+  {% load static %}
+
+  <style media="screen">
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-image: url('{% static "images/bg.png" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .jumbotron {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .jumbotron h1 {
+      margin-bottom: 1rem;
+      color: #0072ff;
+    }
+
+    .jumbotron p.lead {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .btn-primary {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 10px 20px;
+      cursor: pointer;
+      background: #0072ff;
+      color: #fff;
+      font-size: 1.2rem;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .btn-primary:hover {
+      background: #0056b3;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <div class="jumbotron">
+    <h1 class="display-4">Hello {{request.user.first_name}}</h1>
+    <p class="lead">Your Account is not approved till now<br><br>Our Team is checking your profile<br><br>Soon your Account will be confirmed!!!</p>
+    <hr class="my-4">
+    <p>Check Later</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/logout" role="button">Logout For Now</a>
+    </p>
+  </div>
+  {% include "hospital/footer.html" %}
+</body>
+
+</html>

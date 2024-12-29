@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Clinic Management</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('{% static "images/bg.png" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .about-section {
+      background: rgba(0, 86, 179, 0.9);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      width: 50%;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 0 auto;
+    }
+
+    h1.display-4 {
+      font-weight: bold;
+    }
+
+    p.lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    .btn-primary {
+      background-color: #0056b3;
+      border-color: #0056b3;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin: 20px 0;
+    }
+
+    .btn-primary:hover {
+      background-color: #003d80;
+      border-color: #003d80;
+    }
+
+    hr {
+      border-top: 1px solid white;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <div class="content-wrapper">
+    <div class="about-section">
+      <h1 class="display-4">About Our Clinic</h1>
+      <p class="lead">Our clinic is committed to providing top-quality healthcare services to our community. With a team of dedicated professionals, we ensure that every patient receives personalized care tailored to their unique needs.</p>
+      <hr class="my-4">
+      <p>Our mission is to improve the health and well-being of our patients by delivering exceptional medical services and compassionate care. We strive to be a trusted partner in your health journey, offering a range of services from routine check-ups to specialized treatments.</p>
+      <p>Explore our website to learn more about our services, meet our team, and find out how we can assist you in achieving optimal health.</p>
+      <a class="btn btn-primary btn-lg" href="/" role="button">Back</a>
+    </div>
+  </div>
+  {% include "hospital/footer.html" %}
+</body>
+</html>

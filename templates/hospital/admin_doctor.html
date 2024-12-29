@@ -1,0 +1,141 @@
+{% extends 'hospital/admin_base.html' %}
+{% load static %}
+{% block content %}
+<br><br><br><br>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <style type="text/css">
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      color: white;
+    }
+    .navbar {
+      margin-left: 240px;
+    }
+
+    .order-card {
+      color: #fff;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 2px 5px 0.06px rgba(4, 26, 55, 0.2);
+      box-shadow: 0 2px 5px 0.06px rgba(4, 26, 55, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .order-card:hover {
+      -webkit-box-shadow: 0 8px 16px 0.06px rgba(4, 26, 55, 0.2);
+      box-shadow: 0 8px 16px 0.06px rgba(4, 26, 55, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .bg-c-blue {
+      background: linear-gradient(45deg, #4099ff, #73b4ff);
+    }
+
+    .bg-c-green {
+      background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+    }
+
+    .bg-c-yellow {
+      background: linear-gradient(45deg, #FFB64D, #ffcb80);
+    }
+
+    .bg-c-pink {
+      background: linear-gradient(45deg, #FF5370, #ff869a);
+    }
+
+    .card .card-block {
+      padding: 20px;
+    }
+
+    .order-card i {
+      font-size: 30px;
+    }
+
+    .f-left {
+      float: left;
+    }
+
+    .f-right {
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-xl-3" data-aos="fade-up">
+        <div class="card bg-c-blue order-card">
+          <div class="card-block">
+            <a href="/admin-view-doctor">
+              <h6 class="m-b-20">Doctor Record</h6>
+            </a>
+            <br>
+            <h2 class="text-right"><i class="fas fa-user-nurse f-left"></i></h2>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xl-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="card bg-c-green order-card">
+          <div class="card-block">
+            <a href="/admin-add-doctor">
+              <h6 class="m-b-20">Register Doctor</h6>
+            </a>
+            <br>
+            <h2 class="text-right"><i class="fas fa-user-plus f-left"></i></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xl-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="card bg-c-yellow order-card">
+          <div class="card-block">
+            <a href="/admin-approve-doctor">
+              <h6 class="m-b-20">Approve Doctor</h6>
+            </a>
+            <br>
+            <h2 class="text-right"><i class="fas fa-check-circle f-left"></i></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xl-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="card bg-c-pink order-card">
+          <div class="card-block">
+            <a href="/admin-view-doctor-specialisation">
+              <h6 class="m-b-20">Doctor Specialisation</h6>
+            </a>
+            <br>
+            <h2 class="text-right"><i class="fas fa-user-md f-left"></i></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+<br><br><br><br><br><br><br>
+{% endblock content %}

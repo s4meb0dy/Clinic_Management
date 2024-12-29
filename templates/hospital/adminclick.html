@@ -1,0 +1,83 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      margin-right: 500px;
+      background-image: url('{% static "images/bg.png" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .jumbotron {
+      background: rgba(0, 86, 179, 0.9);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 10px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .jumbotron h1 {
+      font-weight: bold;
+    }
+
+    .jumbotron .lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    .btn-primary {
+      background-color: #0056b3;
+      border-color: #0056b3;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border-radius: 30px;
+    }
+
+    .btn-primary:hover {
+      background-color: #003d80;
+      border-color: #003d80;
+    }
+
+    hr {
+      border-top: 1px solid white;
+    }
+  </style>
+</head>
+
+<div class="jumbotron">
+  <h1 class="display-4">Hello, Admin</h1>
+  <p class="lead">Welcome to Clinic Management System.</p>
+  <hr class="my-4">
+  <p>You can access various features after Login/SignUp.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/adminsignup" role="button">Sign Up</a>
+    <a class="btn btn-primary btn-lg" href="/adminlogin" role="button">Login</a>
+  </p>
+</div>
+
+{% endblock content %}
