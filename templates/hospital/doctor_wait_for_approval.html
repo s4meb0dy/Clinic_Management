@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Clinic nagement</title>
+  <title>Clinic management</title>
 
   {% load static %}
 
@@ -79,7 +79,11 @@
     <hr class="my-4">
     <p>Check Later</p>
     <p class="lead">
-      <a class="btn btn-primary btn-lg" href="/logout" role="button">Logout For Now</a>
+      <a href="#" onclick="document.getElementById('logout-form').submit();" class="nav-item nav-link logout-link">Logout</a>
+      <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+      </form>
     </p>
   </div>
   {% include "hospital/footer.html" %}
